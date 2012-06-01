@@ -1,0 +1,28 @@
+<div id="menu">
+<%= link_to "Strona główna", root_url,  :class => "loguj" %> 
+</div>
+
+<div id="naglowek"> 
+<h1>Zarejestruj się</h1>
+</div> 
+
+<%= form_for(@user) do |f| %>
+<%= render 'shared/error_messages' %>
+<div id="insert">
+  <p>
+    <%= f.label :Nazwa %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :Hasło %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation, "Powtórz hasło" %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p>
+    <%= f.submit "Zarejestruj" %>
+  </p>
+<% end %>
+</div>

@@ -1,0 +1,68 @@
+<div id="menu">
+<%= link_to "Strona główna", root_url,  :class => "loguj" %> 
+<% if !current_user.blank?%>
+<div class="menu">Witaj <span class="1"><%= current_user.name %></span> <%= link_to "Wyloguj się", signout_path, :class => "loguj" %>
+<%end%>	</div>
+</div>
+<div class="wrapper">
+<%= stylesheet_link_tag 'Style1' %>
+<p id="notice"><%= notice %></p>
+
+
+
+<div id="naglowek"> 
+<h1><% if !@photo.name.blank? %> <%= @photo.name %><% else %> Untitled <% end %></h1>
+</div>
+<p><%= image_tag @photo.image %></p>
+<% if !current_user.blank? %>    
+<% if current_user.id == @photo.user_id %><%= link_to "Usuń zdjęcie", {:controller => :photos,
+      :action => 'destroy', :id => @photo.id, :class => "TutajWstawiamyNazwęKlasy" }, :method => :delete %><%end%><%end%>
+<p id="dodane"> Dodane przez:<%= @user.name %></p><% if !@photo.average_rating.blank? %> <p id="srednia">Średnia ocena: <%= @photo.average_rating %> <% end %>
+<p id="srednia">
+
+<center>
+<% if !current_user.blank? %>  
+<% if current_user_rating.blank? %>
+Oceń
+<%= form_for(rating_ballot, :html => { :class => 'rating_ballot' }) do |f| %>
+    <%= f.label("value_1", content_tag(:span, '1'), {:class=>"rating", :id=>"1"}) %>
+    <%= radio_button_tag("rating[value]", 1, current_user_rating == 1, :class => 'rating_button') %>
+    <%= f.label("value_2", content_tag(:span, '2'), {:class=>"rating", :id=>"2"}) %>
+    <%= radio_button_tag("rating[value]", 2, current_user_rating == 2, :class => 'rating_button') %>
+    <%= f.label("value_3", content_tag(:span, '3'), {:class=>"rating", :id=>"3"}) %>
+    <%= radio_button_tag("rating[value]", 3, current_user_rating == 3, :class => 'rating_button') %>
+    <%= f.label("value_4", content_tag(:span, '4'), {:class=>"rating", :id=>"4"}) %>
+    <%= radio_button_tag("rating[value]", 4, current_user_rating == 4, :class => 'rating_button') %>
+    <%= f.label("value_5", content_tag(:span, '5'), {:class=>"rating", :id=>"5"}) %>
+    <%= radio_button_tag("rating[value]", 5, current_user_rating == 5, :class => 'rating_button') %>
+
+    <%= hidden_field_tag("photo_id", @photo.id) %>
+
+<% end %>
+<% end %>
+<% end %>
+<% if !current_user.blank? %>  
+<% if !current_user_rating.blank? %>  
+ <p id="srednia">Twoja ocena <%= current_user_rating %> </p><%end%><%end%>
+ <p id="srednia"><% if current_user.blank? %> Aby dodać ocenę <%= link_to "zaloguj się" , signin_path, :class => "loguj" %> <% end %></p>
+</center>
+</p>
+
+<%= paginate @comments %> 
+    <% @comments.each do |comm| %>
+   
+    <table id="comment">
+    <tr> <hr></tr>
+     <tr><td>Dodane przez: <span class="user"><%= comm.user.name %> </span><%= comm.created_at %> </td></tr>
+     <tr id="comment"><td id="comment"><%= comm.content %> </td></tr>
+     </table>
+<% end %>
+
+<%= render 'comment' %>
+    <% session['return-to'] = request.fullpath %>
+
+
+
+
+
+

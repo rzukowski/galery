@@ -1,0 +1,2 @@
+module DestroysHelper
+end

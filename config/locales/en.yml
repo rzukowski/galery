@@ -1,0 +1,28 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+
+
+en:  
+  activerecord:
+    models: 
+      user: "Użytkownik"
+    attributes:
+      user:
+        password: "Hasło"
+        confirmation: "potwierdzenie"
+        name: "Pole nazwy użytkownika"
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: "nie może być puste"
+en:
+  views:
+    pagination:
+      previous: "&lsaquo; Poprzednia"
+      next: "Następna &rsaquo;"
+      truncate: "..."
+      last: "Ostatnia"
+      first: "Pierwsza"

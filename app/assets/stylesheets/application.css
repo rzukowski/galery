@@ -1,0 +1,182 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+
+ 
+#naglowek {
+	left: 15px;
+	right: 15px;
+	height: auto;
+	background-color: #5CCCCC;
+	box-shadow: 5px 5px 5px black;
+	moz-box-shadow: 5px 5px 5px black;
+	moz-border-radius: 10px 0 10px 0 ;
+	border-radius: 10px 0 10px 0 ;
+	margin-bottom: 40px;
+	margin-left: 10px;
+	margin-right: 10px;
+} 
+
+#naglowek h1 { 
+	color: black; 
+	text-align: center; 
+	font-style: italic;
+	font-family: generic; 
+	padding-top: 15px;
+	padding-bottom:10px;
+	-text-shadow: 1px 1px 1px #888;
+	font-size: 30px;
+} 
+
+#naglowek h1 span { 
+	color:white; 
+	font-style: italic; 
+	font-size: 15px; 
+	font-family: georgia;
+
+} 
+
+#akapit {
+	left: 15px;
+	right: 15px; 
+	height: auto; 
+	background-color: #BCCDFF; 
+	box-shadow: 5px 5px 5px black;
+	moz-box-shadow: 5px 5px 5px black;
+	webkit-box-shadow: 5px 5px 5px black;
+	border-radius: 10px 0 10px 0 ;
+	moz-border-radius: 10px 0 10px 0 ;
+	webkit-border-radius: 10px 0 10px 0 ;
+}
+
+#akapit p { 
+	color:white; 
+	font-style: italic; 
+	font-size: 15px; 
+	font-family: georgia;
+	padding-top:10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+
+#menu h4 { 
+	color: white; 
+	padding-left: 15px;
+	margin: 0;
+	text-shadow: 1px 1px 1px #888;
+	} 
+
+
+#menu {
+
+width:100%;
+margin:0 auto;
+padding:5px 1px 1px 5px;
+color:white;
+font-weight:bold;
+font-size:13px;
+background-color:#5CCCCC;
+height:30px;
+-moz-box-shadow: 0 3px 6px #6A6A6A;
+margin-bottom:60px;
+}
+
+#menu a.loguj {
+margin-left:3px;
+	border-left: 1px solid #FFFFFF;
+	
+text-decoration:none;
+	width: 160px;
+	background: #5CCCCC;
+	height: 10px;
+
+	padding:0px 4px 0px 5px;
+
+
+}
+#menu a.loguj:hover {
+margin-left:3px;
+margin-top: 20px;
+height: 1px;
+	border-color: red;
+	border-left: 1px solid #FFFFFF;
+	border-height:100px;
+	width: 160px;
+	padding:0px 4px 0px 5px;
+	color:red;
+}
+
+#menu p {
+	display: block;
+	height: auto;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	margin-top: 3px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+}
+
+
+
+
+#wyloguj p { 
+text-align: right; 
+background: black;
+color: white;
+} 
+
+span { 
+color: red; 
+font-size: 14px;
+font-weight: bold;
+}
+
+#insert {
+margin-left: 30px;
+width: 600px;
+border: 2px solid white; 
+box-shadow: 3px 3px 3px 3px white;
+moz-box-shadow: 3px 3px 3px 3px white;
+webkit-box-shadow: 3px 3px 3px 3px white;
+}
+
+#insert p { 
+color: red; 
+padding-left: 20px;
+} 
+
+#insert ul { 
+} 
+
+#ramka {
+margin-top: 50px;
+margin-bottom: 30px;
+margin-left: 30px;
+margin-right: 30px;
+width: auto;
+height: 200px;
+border: 2px solid white; 
+box-shadow: 3px 3px 3px 3px white;
+moz-box-shadow: 3px 3px 3px 3px white;
+webkit-box-shadow: 3px 3px 3px 3px white;
+}
+
+
+#ramka ul { 
+} 

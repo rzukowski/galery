@@ -1,0 +1,26 @@
+<div id="menu">
+<%= link_to "Strona główna", root_url,  :class => "loguj" %> 
+</div>
+
+<div id="naglowek"> 
+<h1>Zaloguj się</h1>
+</div>
+<h2><%= flash[:message] %></h2>
+<%= form_for(:session, :url => sessions_path) do |f| %>
+  <div id="insert"> 
+<p>
+    <%= f.label :Nazwa %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :Hasło %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.submit "Zaloguj" %>
+  </p>
+<% end %>
+
+<p>Jesteś nowym użytkownikiem <%= link_to "Zarejestruj się teraz!", signup_path %></p>
+
+</div>

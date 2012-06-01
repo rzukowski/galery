@@ -1,0 +1,10 @@
+<h2> Add photo </h2>
+<%= simple_form_for @photo.build do |f| %>
+
+  <%= f.text_area :name, :input_html => {:rows => 4, :cols => 40}, :class => "create_comment" %>
+  <%= f.file_field :image %>
+ <%=f.hidden_field :user_id, :value => @user.id %>
+ <%=f.hidden_field :user_id, :value => current_user.id %> </div>
+  <br><%= f.button :submit, :value => "Submit" %>
+<% end %>
+

@@ -1,0 +1,6 @@
+<%= simple_form_for @fortune.comments.build do |f| %>
+  <%= f.input :content, :input_html => {:rows => 4, :cols => 40} %>
+ <%=f.hidden_field :fortune_id, :value => @fortune.id %>
+ <%=f.hidden_field :user_id, :value => "1" %>
+  <%= f.button :submit, :value => "Submit" %>
+<% end %>
