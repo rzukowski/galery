@@ -6,7 +6,7 @@ def create
  user = User.authenticate(params[:session][:name],
                            params[:session][:password])
   if user.nil?
-     flash[:message] = "Niepoprawna kombinacja użytkownik/hasło"
+     flash[:message] = "Niepoprawna kombinacja uzytkownik/haslo"
 
   render 'new'
 

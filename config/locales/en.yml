@@ -6,23 +6,23 @@
 en:  
   activerecord:
     models: 
-      user: "Użytkownik"
+      user: "Uzytkownik"
     attributes:
       user:
-        password: "Hasło"
+        password: "Haslo"
         confirmation: "potwierdzenie"
-        name: "Pole nazwy użytkownika"
+        name: "Pole nazwy uzytkownika"
     errors:
       models:
         user:
           attributes:
             password:
-              blank: "nie może być puste"
+              blank: "nie moze byc puste"
 en:
   views:
     pagination:
       previous: "&lsaquo; Poprzednia"
-      next: "Następna &rsaquo;"
+      next: "Nastepna &rsaquo;"
       truncate: "..."
       last: "Ostatnia"
       first: "Pierwsza"
