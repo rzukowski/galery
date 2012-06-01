@@ -6,8 +6,8 @@ has_many :photos
 has_many :comments
 attr_accessor :password
 attr_accessible :name, :password, :password_confirmation
-validates :name, :presence => { :message => 'nie może być puste' }
-validates :password, :presence => true, :confirmation => { :message => 'nie zgadza się z potwierdzeniem' }
+validates :name, :presence => { :message => 'nie moze byc puste' }
+validates :password, :presence => true, :confirmation => { :message => 'nie zgadza sie z potwierdzeniem' }
 
  before_save :encrypt_password
 def has_password?(submitted_password)
