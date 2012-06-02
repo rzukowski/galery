@@ -1,5 +1,5 @@
 <div id="menu">
-<%= link_to "Strona główna", root_url,  :class => "loguj" %> 
+<%= link_to "Strona glowna", root_url,  :class => "loguj" %> 
 <% if !current_user.blank?%>
 <div class="menu">Witaj <span class="1"><%= current_user.name %></span> <%= link_to "Wyloguj sie", signout_path, :class => "loguj" %>
 <%end%>	</div>
@@ -15,7 +15,7 @@
 </div>
 <p><%= image_tag @photo.image %></p>
 <% if !current_user.blank? %>    
-<% if current_user.id == @photo.user_id %><%= link_to "Usuń zdjęcie", {:controller => :photos,
+<% if current_user.id == @photo.user_id %><%= link_to "Usun zdjecie", {:controller => :photos,
       :action => 'destroy', :id => @photo.id, :class => "TutajWstawiamyNazweKlasy" }, :method => :delete %><%end%><%end%>
 <p id="dodane"> Dodane przez:<%= @user.name %></p><% if !@photo.average_rating.blank? %> <p id="srednia">Srednia ocena: <%= @photo.average_rating %> <% end %>
 <p id="srednia">
@@ -44,7 +44,7 @@ Oceń
 <% if !current_user.blank? %>  
 <% if !current_user_rating.blank? %>  
  <p id="srednia">Twoja ocena <%= current_user_rating %> </p><%end%><%end%>
- <p id="srednia"><% if current_user.blank? %> Aby dodać ocenę <%= link_to "zaloguj sie" , signin_path, :class => "loguj" %> <% end %></p>
+ <p id="srednia"><% if current_user.blank? %> Aby dodać ocene <%= link_to "zaloguj sie" , signin_path, :class => "loguj" %> <% end %></p>
 </center>
 </p>
 
