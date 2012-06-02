@@ -10,11 +10,11 @@
   <%= f.text_area :content, :input_html => {:rows => 4, :cols => 40}, :class => "create_comment" %>
  <%=f.hidden_field :photo_id, :value => @photo.id %>
  <%=f.hidden_field :user_id, :value => current_user.id %>
-  <br><%= f.button :submit, :value => "Wyślij" %>
+  <br><%= f.button :submit, :value => "Wyslij" %>
  
   <% end %>
 <% end %><p id="srednia">
 <% if current_user.blank? %>
- Aby dodać komentarz <%= link_to " zarejestruj się" , signup_path %> lub <%= link_to "zaloguj" , signin_path %> 
+ Aby dodać komentarz <%= link_to " zarejestruj sie" , signup_path %> lub <%= link_to "zaloguj" , signin_path %> 
 
 <%end%></p>
