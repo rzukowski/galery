@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20120602123050) do
     t.string   "image"
     t.integer  "userid"
     t.integer  "user_id"
+    t.integer  "average_rat"
   end
 
   create_table "ratings", :force => true do |t|

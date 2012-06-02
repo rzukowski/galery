@@ -14,5 +14,9 @@ def average_rating
     end
     @total = self.ratings.size
     @value.to_f / @total.to_f
+    self.update_attribute(:average_rat, @total.to_f == 0 ? 0.0 : @value.to_f / @total.to_f)
 end
+
+
+
 end

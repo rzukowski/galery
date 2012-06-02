@@ -11,7 +11,7 @@ Chcesz dodać zdjęcie?
 <%= link_to "zaloguj" , signin_path, :class => "loguj"  %>
  <%end%>
 
-<div class="menu"><ul><li>zdjęcia naszych użytkowników:<ul>
+<div class="menu"><ul><li>zdjęcia użytkowników:<ul>
 <li><% @users.each do |user| %>
     
       <%= link_to user.name, user %>
@@ -24,7 +24,6 @@ Chcesz dodać zdjęcie?
 </div>
 
 <body> 
-
 
 <div id="naglowek">
 
