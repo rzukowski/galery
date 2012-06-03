@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
-  # GET /photos
-  # GET /photos.json
+
+
   def index
     @photos = Photo.page(params[:page]).per(4)
    
@@ -80,4 +80,9 @@ class PhotosController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+ 
+  
 end
+
+
